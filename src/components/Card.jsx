@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import { BsChatRightQuote } from "react-icons/bs"
-import Button from './Button';
-
 
 const Card = () => {
     const [advice, setAdvice] = useState([]);
@@ -31,11 +29,13 @@ const Card = () => {
                     <span className='text-[18px]'>{advice.advice}</span>
                 </div>
                 <div className='flex align-middle justify-center' >
-                    <Button onClick={console.log('oi')} />
+                    <button className="bg-neon p-3 rounded-full md:hover:bg-green" onClick={getAdvice} >
+                        <img src={require("../assets/icon-dice.png")} alt="new advice" className='md:hover:transition-transform md:hover:duration-500 md:hover:animate-spin' />
+                    </button>
                 </div>
             </div>
         </>
     )
-} 
+}
 
 export default Card 
